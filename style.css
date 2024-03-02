@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    font-family:'poopins';
+    color:#fff;
+
+}
+body{
+    background:#ab0a0a;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+}
+.text-content{
+    max-width:400px;
+    border:2px solid #fff;
+    border-left:0;
+    padding:10px;
+    border-top-right-radius:10px;
+    border-bottom-right-radius:10px;
+    box-shadow:0 5px 20px #000;
+    position:absolute;
+    left:17%;
+    background:#ab0a0a;
+    transition:.2s ease;
+    visibility:hidden;
+    opacity: 0;
+}
+.container:hover .text-content{
+    left:34%;
+    transition:.5s ease;
+    visibility: visible;
+    opacity:1;
+}
+.container{
+    height:400px;
+    width:600px;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+    
+}
+.container img{
+    height:100%;
+    filter:drop-shadow(-20px 0 20px #000);
+    position:absolute;
+    left:30%;
+    transition:.5s ease;
+    z-index:1;
+
+}
+.container:hover img{
+    left:0%;
+}
+.text-content h2{
+
+    opacity:0;
+    font-size:60px;
+    animation:LeftSlide 1s ease forwards;
+}
+.container:hover h2{
+    transform:translateX(-100px);
+    opacity:0;
+    animation:LeftSlide .7s ease forwards;
+    animation-delay:.2s;
+}
+@keyframes LeftSlide{
+    0%{
+        transform:translateX(-100px);
+        opacity:0;
+    }
+    100%{
+        transform:translateX(0px);
+        opacity:1;
+    }
+}
+.text-content .price{
+    font-size:25px;
+
+}
+.container:hover .price{
+    transform:translateX(-100px);
+    opacity:0;
+    animation:LeftSlide .7s ease forwards;
+    animation-delay: 0.4s;
+}
+.text-content .des{
+    font-size:13px;
+
+}
+.container:hover .des{
+    transform:translateX(-100px);
+    opacity:0;
+    animation:LeftSlide .7s ease forwards;
+    animation-delay: 0.6s;
+}
+.text-content .btn{
+    height:35px;
+    width:100px;
+    font-weight:500;
+    background:#ab0a0a;
+    color:#fff;
+    border:2px solid #fff;
+    margin:15px 0;
+    border-radius:5px;
+    cursor:pointer;
+    transition:0.5s ease;
+
+}
+.btn:hover{
+    background:#fff;
+    color:#ab0a0a
+}
+.container:hover .btn{
+    transform:translateX(-100px);
+    opacity:0;
+    animation:LeftSlide .7s ease forwards;
+    animation-delay: 0.8s;
+}
